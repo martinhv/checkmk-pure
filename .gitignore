@@ -1,0 +1,9 @@
+.idea
+geckodriver.log
+venv
+*.pyc
+screenshots
+summary.md
+build
+.DS_Store
+http-client.private.env.json

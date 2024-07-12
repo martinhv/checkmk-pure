@@ -1,0 +1,5 @@
+[submodule "checkmk"]
+	path = checkmk
+	url = https://github.com/tribe29/checkmk.git
+	branch = v2.2.0b5
+	shallow = true

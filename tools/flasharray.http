@@ -1,0 +1,32 @@
+### Login query
+
+POST https://{{fa_host}}/api/2.21/login
+api-token: {{fa_api_token}}
+
+> {%
+    client.global.set("fa_auth_token", response.headers.valueOf("X-Auth-Token"));
+%}
+
+### Drives query
+
+GET https://{{fa_host}}/api/2.21/drives
+X-Auth-Token: {{fa_auth_token}}
+Accept: application/json
+
+### Hardware query
+
+GET https://{{fa_host}}/api/2.21/hardware
+X-Auth-Token: {{fa_auth_token}}
+Accept: application/json
+
+### Controllers query
+
+GET https://{{fa_host}}/api/2.21/controllers
+X-Auth-Token: {{fa_auth_token}}
+Accept: application/json
+
+### Network interfaces query
+
+GET https://{{fa_host}}/api/2.21/network-interfaces
+X-Auth-Token: {{fa_auth_token}}
+Accept: application/json

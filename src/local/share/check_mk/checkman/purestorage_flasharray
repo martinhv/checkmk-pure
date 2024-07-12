@@ -1,0 +1,10 @@
+title: PureStorage: FlashArray
+agents: special
+catalog: storagehw
+license: proprietary
+distribution: check_mk
+description:
+ This check processes all data from the PureStorage FlashArray special agent.
+
+inventory:
+ One service for each hardware item, network settings, and more.

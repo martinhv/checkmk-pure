@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+
+# This file is the entry point for the FlashBlade special agent.
+
+import sys
+
+from purestorage_checkmk.flashblade import special_agent
+
+sys.exit(special_agent.run(sys.stdin, sys.stdout))

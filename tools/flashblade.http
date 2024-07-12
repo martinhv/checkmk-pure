@@ -1,0 +1,61 @@
+### Login query
+
+POST https://{{fb_host}}/api/login
+api-token: {{fb_api_token}}
+
+> {%
+    client.global.set("fb_auth_token", response.headers.valueOf("X-Auth-Token"));
+%}
+
+### Arrays query
+
+GET https://{{fb_host}}/api/2.9/arrays
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json
+
+### Blades query
+
+GET https://{{fb_host}}/api/2.9/blades
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json
+
+### Certificates query
+
+GET https://{{fb_host}}/api/2.9/certificates
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json
+
+### Hardware query
+
+GET https://{{fb_host}}/api/2.9/hardware
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json
+
+### Network interfaces query
+
+GET https://{{fb_host}}/api/2.9/network-interfaces
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json
+
+### Array space query
+
+GET https://{{fb_host}}/api/2.9/arrays/space
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json
+
+### Filesystem space query
+
+GET https://{{fb_host}}/api/2.9/arrays/space?type=file-system
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json
+
+### Object store space query
+
+GET https://{{fb_host}}/api/2.9/arrays/space?type=object-store
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json
+
+### API tokens
+GET https://{{fb_host}}/api/2.9/admins/api-tokens
+X-Auth-Token: {{fb_auth_token}}
+Accept: application/json

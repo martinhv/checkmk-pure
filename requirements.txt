@@ -1,0 +1,24 @@
+pydevd-pycharm
+behave
+selenium
+cryptography
+requests
+py-pure-client
+
+# Dependencies for Checkmk
+typing-extensions
+pyghmi
+pycryptodomex
+pyOpenSSL
+pydantic < 2.0.0
+setproctitle
+pyasn1
+pysnmp
+semver
+
+# Mkdocs
+mkdocs
+mkdocs-material
+mkdocs-redirects
+mkdocs-pdf-export-plugin
+beautifulsoup4

@@ -1,0 +1,24 @@
+version: '3.2'
+services:
+  checkmk:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src/local/lib/check_mk/base/plugins/agent_based/:/opt/omd/sites/monitoring/local/lib/check_mk/base/plugins/agent_based/
+      - ./src/local/lib/python3/purestorage_checkmk/:/opt/omd/sites/monitoring/local/lib/python3/purestorage_checkmk/
+      - ./src/local/share/check_mk/agents/special/:/opt/omd/sites/monitoring/local/share/check_mk/agents/special/
+      - ./src/local/share/check_mk/checkman/:/opt/omd/sites/monitoring/local/share/check_mk/checkman/
+      - ./src/local/share/check_mk/checks/:/opt/omd/sites/monitoring/local/share/check_mk/checks/
+      - ./src/local/share/check_mk/web/plugins/wato/:/opt/omd/sites/monitoring/local/share/check_mk/web/plugins/wato/
+    networks:
+      checkmk:
+networks:
+  checkmk:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.199.0/24
+          gateway: 192.168.199.1
